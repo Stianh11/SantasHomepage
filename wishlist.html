@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png">
+    <title>Wishlist</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="./">
+                <img src="./images/logo.png" alt="Santa Logo" />
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./santashelpers.html">Santas Helpers</a></li>
+            <li><a href="./wishlist.html">Send Wishlist</a></li>
+        </ul>
+    </nav>
+    <header>
+      
+    </header>
+    <main class="wish-main">
+        <h1>Send your wishlist to Santa!</h1>
+        <form action="#" method="post">
+            <label for="email">Enter a grownup's Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Email here" autofocus>
+            <label for="name">What’s your name?:</label>
+            <input type="text" id="name" name="name" required placeholder="Name here"><br>
+            <label for="age">How old are you?:</label>
+            <input type="number" id="age" name="age" min="1" required placeholder="Age here"><br>
+            <label for="wishlist">What do you wish for Christmas?:</label>
+            <textarea id="wishlist" name="wishlist" rows="5" maxlength=""></textarea><br>
+            <div class="align-button" style="text-align: center;">
+                <button type="submit">Send your Wishlist!</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Santa's Wonderland. All rights reserved to Santa.</p>
+    </footer>
+    <canvas id="snowCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
