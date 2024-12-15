@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function()
     const canvas = document.getElementById("snowCanvas");
     const ctx = canvas.getContext("2d");
 
-    //tilpass canvas-størrelsen
     const updateCanvasSize = function()
     {
         canvas.width = window.innerWidth;
@@ -13,23 +12,21 @@ document.addEventListener("DOMContentLoaded", function()
     updateCanvasSize();
     window.addEventListener("resize", updateCanvasSize);
 
-    // lag lista av snø
     const snowflakes = [];
     for (let i = 0; i < 100; i++)
     {
         snowflakes.push({
-            x: Math.random() * canvas.width,        // Startposisjon x
-            y: Math.random() * canvas.height,       // Startposisjon y
-            radius: Math.random() * 3 + 1,          // Størrelse på snøfnugg
-            speed: Math.random() * 2 + 1,           // Hastighet på fall
-            drift: Math.random() * 1 - 0.5          // Lateral bevegelse
+            x: Math.random() * canvas.width,  
+            y: Math.random() * canvas.height, 
+            radius: Math.random() * 3 + 1,    
+            speed: Math.random() * 2 + 1,  
+            drift: Math.random() * 1 - 0.5   
         });
     }
 
-    // funsjon for å spwana snø
     const renderSnow = function()
     {
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Fjern gammel tegning
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = "white";
         snowflakes.forEach(flake =>
