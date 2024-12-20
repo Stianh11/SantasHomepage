@@ -13,11 +13,15 @@ body{
 html, body{
     width: 100%;
     height: 100%; 
-    overflow-x: hidden; /* hindrer horisontal scroll */
+    overflow-x: hidden; 
 }
 nav .logo img{
     height: 80px;
     width: auto;
+    transition: transform 0.8s ease-in-out; 
+}
+nav .logo img:hover {
+    transform: rotate(360deg);
 }
 nav{
     max-width: auto;
@@ -87,32 +91,32 @@ header{
     align-items: center;
     color: white;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
-    overflow: hidden; /* Hindrer at noe strekker seg utenfor seksjonen */
+    overflow: hidden; 
 }
 .parallax-1{
-    background-image: url('./images/fantasy-4656186_640.jpg'); /* Replace with your image */
+    background-image: url('./images/fantasy-4656186_640.jpg');
 }
 
 .parallax-2{
-    background-image: url('./images/santasCabin.jpg'); /* Replace with your image */
+    background-image: url('./images/santasCabin.jpg'); 
 }
 .parallax-3{ 
-    background-image: url('./images/backgroundtest.jpg'); /* Replace with your image */
+    background-image: url('./images/backgroundtest.jpg'); 
 }
 
 .parallax-4{
-    background-image: url('./images/wishlistbg.jpg'); /* Replace with your image */
+    background-image: url('./images/wishlistbg.jpg'); 
 }
 .parallax .content{
     text-align: center;
     padding: 20px;
     max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
 }
 .text-section{
     padding: 40px 20px;
-    background-color: #f4f7f6; /* Light background for contrast */
+    background-color: #f4f7f6; 
     text-align: center;
 }
 .text-section h2{
@@ -167,7 +171,7 @@ main h1{
     height: 300px;
     background-color: #f7f7f7;
     border: 2px solid red; 
-    border-radius: 50%; /* gjør boksen oval */
+    border-radius: 50%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,11 +183,11 @@ main h1{
 }
 
 .profile img{
-    width: 100px; /* Tilpass størrelsen på bildet */
+    width: 100px; 
     height: 120px;
-    object-fit: cover; /* Sørg for at bildet fyller området uten deformasjon */
-    border-radius: 50%; /* Gjør bildet rundt */
-    margin-bottom: 10px; /* Avstand mellom bildet og teksten */
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 10px; /
 }
 .profile h2{
     font-size: 1.2em;
@@ -196,14 +200,14 @@ main h1{
 }
 .worker-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Hver kolonne er minst 200px */
-    gap: 20px; /* Avstand mellom boksene */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
     padding: 20px;
-    justify-content: center; /* Sentraliserer boksene horisontalt */
-    align-items: center; /* Sentraliserer innhold vertikalt */
-    width: 100%; /* Sørg for at grid strekker seg over tilgjengelig plass */
-    margin: 0 auto; /* Sørg for at hele grid-en er sentrert */
-    text-align: center; /* Sørg for at teksten er sentrert */
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    margin: 0 auto; 
+    text-align: center; 
 }
 .worker{
     border-radius: 10px;
@@ -252,28 +256,28 @@ main h1{
     background-image: url('./images/raindeer8.png');
 }
 .container-slider{
-    display: flex; /* Flexbox for å plassere panelene horisontalt */
-    justify-content: center; /* Sentrerer panelene i containeren */
-    align-items: center; /* Sentraliserer vertikalt */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
-    height: 300px; /* Passer høyden til slideren */
-    overflow: hidden; /* Hindrer at utvidede paneler stikker utenfor */
+    height: 300px; 
+    overflow: hidden; 
     margin: 0px auto;
     gap: 10px;
 }
 .panel{
-    flex: 1; /* Start med like størrelse på panelene */
-    height: 100%; /* Fyll hele høyden til containeren */
+    flex: 1; 
+    height: 100%; 
     border-radius: 10px;
-    background-size: cover; /* Sørger for at bakgrunnen dekker hele panelet */
+    background-size: cover; 
     background-position: center;
     cursor: pointer;
-    transition: flex 0.7s ease-in-out; /* Jevn animasjon ved utvidelse */
+    transition: flex 0.7s ease-in-out; 
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Plasser teksten nederst */
+    align-items: flex-end; 
     color: white;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -285,7 +289,7 @@ main h1{
     font-size: 30px;
     color: red;
 }
-.panel.active{/*no space to target 2 values in same tag*/
+.panel.active{
     flex: 5;
 }
 .panel.active h3{
@@ -320,7 +324,7 @@ input, textarea{
     background-color: transparent;
     border: 1px solid #d4af8c;
     padding: 5px;
-    width: calc(100% - 20px); /* Ensures proper sizing */
+    width: calc(100% - 20px); 
     margin-bottom: 10px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -329,7 +333,7 @@ input, textarea{
 textarea{
     line-height: 1.6;
     background-image: linear-gradient(to bottom, #e8dcc8 1px, transparent 1px);
-    background-size: 100% 24px; /* spacing for lines */
+    background-size: 100% 24px; 
     resize: none; 
 }
 .wish-main button{
@@ -348,7 +352,7 @@ textarea{
 }
 .wish-main button:hover{
     color: #2c8d21;
-    background-color: #fff; /* Subtle hover effect */
+    background-color: #fff; 
     border: 2px solid #2c8d21;
 }
 footer{
@@ -361,7 +365,7 @@ footer{
     justify-content: center;
     align-items:end;
     position: relative;
-    color: #fff; /* Lys tekst */
+    color: #fff; 
     text-align: end;
     padding: 20px;
 }
