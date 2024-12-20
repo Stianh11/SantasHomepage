@@ -1,375 +1,390 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Mountains of Christmas', cursive;
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: "Mountains of Christmas", cursive;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
-html, body{
-    width: 100%;
-    height: 100%; 
-    overflow-x: hidden; /* hindrer horisontal scroll */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* hindrer horisontal scroll */
 }
-nav .logo img{
-    height: 80px;
-    width: auto;
+nav .logo img {
+  height: 80px;
+  width: auto;
+  transition: transform 0.8s ease-in-out; /* Smooth animation */
 }
-nav{
-    max-width: auto;
-    margin: 0 auto;
-    min-height: 9vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    background-image: url("./images/istockphoto-683267846-1024x1024.jpg");
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position:relative;
-    top: 0;
+nav .logo img:hover {
+  transform: rotate(360deg); /* Full spin */
 }
-nav li{
-    font-size: 1rem;
-    font-weight: 600;
-    white-space: nowrap;
+nav {
+  max-width: auto;
+  margin: 0 auto;
+  min-height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-image: url("./images/istockphoto-683267846-1024x1024.jpg");
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
 }
-nav li a{
-    text-decoration: none;
-    color: #fff;
-    padding: 0.5rem 0.75rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-radius: 4px;
+nav li {
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
-nav li a:hover{
-    color: #2c8d21;
+nav li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
 }
-nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+nav li a:hover {
+  color: #2c8d21;
 }
-nav ul li{
-    margin: 0 15px;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
-ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
+nav ul li {
+  margin: 0 15px;
 }
-header{
-    background-image: url('./images/xmasnewheader.png');
-    width:100%;
-    height:30vh;
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display:flex;
-    justify-content: flex-end;
-    align-items:end;
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+header {
+  background-image: url("./images/xmasnewheader.png");
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
 }
 
 /* Parallax sections */
-.parallax{
-    position: relative;
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
-    overflow: hidden; /* Hindrer at noe strekker seg utenfor seksjonen */
+.parallax {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+  overflow: hidden; /* Hindrer at noe strekker seg utenfor seksjonen */
 }
-.parallax-1{
-    background-image: url('./images/fantasy-4656186_640.jpg'); /* Replace with your image */
-}
-
-.parallax-2{
-    background-image: url('./images/santasCabin.jpg'); /* Replace with your image */
-}
-.parallax-3{ 
-    background-image: url('./images/backgroundtest.jpg'); /* Replace with your image */
+.parallax-1 {
+  background-image: url("./images/fantasy-4656186_640.jpg"); /* Replace with your image */
 }
 
-.parallax-4{
-    background-image: url('./images/wishlistbg.jpg'); /* Replace with your image */
+.parallax-2 {
+  background-image: url("./images/santasCabin.jpg"); /* Replace with your image */
 }
-.parallax .content{
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-    border-radius: 10px;
-}
-.text-section{
-    padding: 40px 20px;
-    background-color: #f4f7f6; /* Light background for contrast */
-    text-align: center;
-}
-.text-section h2{
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-.text-section p{
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-}
-.parallax button{
-    color: #fff;
-    background-image: url("./images/istockphoto-683267846-1024x1024.jpg");
-    background-position: center;
-    background-size: cover;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-}
-.parallax button a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.parallax button a:hover{
-    color: #2c8d21;
+.parallax-3 {
+  background-image: url("./images/backgroundtest.jpg"); /* Replace with your image */
 }
 
-.helpers-main{
-    background-image: url('./images/background-workshop.jpg');
-    background-position: center;
-    background-size: cover;
+.parallax-4 {
+  background-image: url("./images/wishlistbg.jpg"); /* Replace with your image */
 }
-.profile-flex{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+.parallax .content {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for readability */
+  border-radius: 10px;
 }
-main h1{
-    text-align: center;
-    color: #fff;
-    font-size: 45px;
-    font-weight: bold;
+.text-section {
+  padding: 40px 20px;
+  background-color: #f4f7f6; /* Light background for contrast */
+  text-align: center;
 }
-.profile{
-    width: 200px; 
-    height: 300px;
-    background-color: #f7f7f7;
-    border: 2px solid red; 
-    border-radius: 50%; /* gjør boksen oval */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    padding: 10px; 
-    text-align: center; 
-    overflow: hidden;
+.text-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
 }
-
-.profile img{
-    width: 100px; /* Tilpass størrelsen på bildet */
-    height: 120px;
-    object-fit: cover; /* Sørg for at bildet fyller området uten deformasjon */
-    border-radius: 50%; /* Gjør bildet rundt */
-    margin-bottom: 10px; /* Avstand mellom bildet og teksten */
+.text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
 }
-.profile h2{
-    font-size: 1.2em;
-    margin: 5px 0;
-    color: #333;
+.parallax button {
+  color: #fff;
+  background-image: url("./images/istockphoto-683267846-1024x1024.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
 }
-.profile p{
-    font-size: 1em;
-    color: #666;
+.parallax button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
-.worker-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Hver kolonne er minst 200px */
-    gap: 20px; /* Avstand mellom boksene */
-    padding: 20px;
-    justify-content: center; /* Sentraliserer boksene horisontalt */
-    align-items: center; /* Sentraliserer innhold vertikalt */
-    width: 100%; /* Sørg for at grid strekker seg over tilgjengelig plass */
-    margin: 0 auto; /* Sørg for at hele grid-en er sentrert */
-    text-align: center; /* Sørg for at teksten er sentrert */
-}
-.worker{
-    border-radius: 10px;
-    height: 400px;
-    width: 300px;
-    background-color: #f7f7f7; 
-    border: 2px solid red; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px;
-}
-.worker img{
-    width: 100px;
-    height: 120px;
-    object-fit: cover; 
-    border-radius: 50%;
-    margin-bottom: 10px
-}
-.one{
-    background-image: url('./images/raindeer1.png');
-}
-.two{
-    background-image: url('./images/raindeer2.png');
-}
-.three{
-    background-image: url('./images/raindeer3.png');
-}
-.four{
-    background-image: url('./images/raindeer4.png');
-}
-.five{
-    background-image: url('./images/raindeer5.png');
-}
-.six{
-    background-image: url('./images/raindeer6.png');
-}
-.seven{
-    background-image: url('./images/raindeer7.png');
-}
-.eight{
-    background-image: url('./images/raindeer8.png');
-}
-.container-slider{
-    display: flex; /* Flexbox for å plassere panelene horisontalt */
-    justify-content: center; /* Sentrerer panelene i containeren */
-    align-items: center; /* Sentraliserer vertikalt */
-    width: 100%;
-    height: 300px; /* Passer høyden til slideren */
-    overflow: hidden; /* Hindrer at utvidede paneler stikker utenfor */
-    margin: 0px auto;
-    gap: 10px;
-}
-.panel{
-    flex: 1; /* Start med like størrelse på panelene */
-    height: 100%; /* Fyll hele høyden til containeren */
-    border-radius: 10px;
-    background-size: cover; /* Sørger for at bakgrunnen dekker hele panelet */
-    background-position: center;
-    cursor: pointer;
-    transition: flex 0.7s ease-in-out; /* Jevn animasjon ved utvidelse */
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Plasser teksten nederst */
-    color: white;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
-}
-.panel h3{
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    opacity: 0;
-    font-size: 30px;
-    color: red;
-}
-.panel.active{/*no space to target 2 values in same tag*/
-    flex: 5;
-}
-.panel.active h3{
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
+.parallax button a:hover {
+  color: #2c8d21;
 }
 
-.wish-main{
-    background-image: url("./images/wishlistsanta.jpg");
-    background-size: cover;
-    background-position:center;
-    width: 100%;
-    height: auto;
-    text-align: center;
+.helpers-main {
+  background-image: url("./images/background-workshop.jpg");
+  background-position: center;
+  background-size: cover;
 }
-.wish-main h1{
-    color: rgb(51, 50, 50);
+.profile-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
-form{
-    margin: 0px auto;
-    padding: 15px;
-    position: relative;
-    max-width: 400px;
-    margin: 0px auto;
-    margin-top: 20px;
-    padding: 15px;
-    background: #fff; 
-    background-color: transparent;
+main h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
 }
-input, textarea{
-    font-size: 16px;
-    background-color: transparent;
-    border: 1px solid #d4af8c;
-    padding: 5px;
-    width: calc(100% - 20px); /* Ensures proper sizing */
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+.profile {
+  width: 200px;
+  height: 300px;
+  background-color: #f7f7f7;
+  border: 2px solid red;
+  border-radius: 50%; /* gjør boksen oval */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
 }
-textarea{
-    line-height: 1.6;
-    background-image: linear-gradient(to bottom, #e8dcc8 1px, transparent 1px);
-    background-size: 100% 24px; /* spacing for lines */
-    resize: none; 
+
+.profile img {
+  width: 100px; /* Tilpass størrelsen på bildet */
+  height: 120px;
+  object-fit: cover; /* Sørg for at bildet fyller området uten deformasjon */
+  border-radius: 50%; /* Gjør bildet rundt */
+  margin-bottom: 10px; /* Avstand mellom bildet og teksten */
 }
-.wish-main button{
-    color: #fff;
-    background-image: url("./images/istockphoto-683267846-1024x1024.jpg");
-    background-position: center;
-    background-size: cover;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+.profile h2 {
+  font-size: 1.2em;
+  margin: 5px 0;
+  color: #333;
 }
-.wish-main button:hover{
-    color: #2c8d21;
-    background-color: #fff; /* Subtle hover effect */
-    border: 2px solid #2c8d21;
+.profile p {
+  font-size: 1em;
+  color: #666;
 }
-footer{
-    background-image: url(./images/footer.jpeg);
-    width:100%;
-    height:20vh;
-    background-position:center;
-    background-size: cover;
-    display:flex;
-    justify-content: center;
-    align-items:end;
-    position: relative;
-    color: #fff; /* Lys tekst */
-    text-align: end;
-    padding: 20px;
+.worker-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Hver kolonne er minst 200px */
+  gap: 20px; /* Avstand mellom boksene */
+  padding: 20px;
+  justify-content: center; /* Sentraliserer boksene horisontalt */
+  align-items: center; /* Sentraliserer innhold vertikalt */
+  width: 100%; /* Sørg for at grid strekker seg over tilgjengelig plass */
+  margin: 0 auto; /* Sørg for at hele grid-en er sentrert */
+  text-align: center; /* Sørg for at teksten er sentrert */
 }
-canvas{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+.worker {
+  border-radius: 10px;
+  height: 400px;
+  width: 300px;
+  background-color: #f7f7f7;
+  border: 2px solid red;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+.worker img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.one {
+  background-image: url("./images/raindeer1.png");
+}
+.two {
+  background-image: url("./images/raindeer2.png");
+}
+.three {
+  background-image: url("./images/raindeer3.png");
+}
+.four {
+  background-image: url("./images/raindeer4.png");
+}
+.five {
+  background-image: url("./images/raindeer5.png");
+}
+.six {
+  background-image: url("./images/raindeer6.png");
+}
+.seven {
+  background-image: url("./images/raindeer7.png");
+}
+.eight {
+  background-image: url("./images/raindeer8.png");
+}
+.container-slider {
+  display: flex; /* Flexbox for å plassere panelene horisontalt */
+  justify-content: center; /* Sentrerer panelene i containeren */
+  align-items: center; /* Sentraliserer vertikalt */
+  width: 100%;
+  height: 300px; /* Passer høyden til slideren */
+  overflow: hidden; /* Hindrer at utvidede paneler stikker utenfor */
+  margin: 0px auto;
+  gap: 10px;
+}
+.panel {
+  flex: 1; /* Start med like størrelse på panelene */
+  height: 100%; /* Fyll hele høyden til containeren */
+  border-radius: 10px;
+  background-size: cover; /* Sørger for at bakgrunnen dekker hele panelet */
+  background-position: center;
+  cursor: pointer;
+  transition: flex 0.7s ease-in-out; /* Jevn animasjon ved utvidelse */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Plasser teksten nederst */
+  color: white;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.panel h3 {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  opacity: 0;
+  font-size: 30px;
+  color: red;
+}
+.panel.active {
+  /*no space to target 2 values in same tag*/
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.wish-main {
+  background-image: url("./images/wishlistsanta.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.wish-main h1 {
+  color: rgb(51, 50, 50);
+}
+form {
+  margin: 0px auto;
+  padding: 15px;
+  position: relative;
+  max-width: 400px;
+  margin: 0px auto;
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  background-color: transparent;
+}
+input,
+textarea {
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #d4af8c;
+  padding: 5px;
+  width: calc(100% - 20px); /* Ensures proper sizing */
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+textarea {
+  line-height: 1.6;
+  background-image: linear-gradient(to bottom, #e8dcc8 1px, transparent 1px);
+  background-size: 100% 24px; /* spacing for lines */
+  resize: none;
+}
+.wish-main button {
+  color: #fff;
+  background-image: url("./images/istockphoto-683267846-1024x1024.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.wish-main button:hover {
+  color: #2c8d21;
+  background-color: #fff; /* Subtle hover effect */
+  border: 2px solid #2c8d21;
+}
+footer {
+  background-image: url(./images/footer.jpeg);
+  width: 100%;
+  height: 20vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  color: #fff; /* Lys tekst */
+  text-align: end;
+  padding: 20px;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
